@@ -1,4 +1,3 @@
-import style from './admin.module.css'
 import Header from '../../components/Header'
 import Input from '../../components/input'
 import { useState, FormEvent, useEffect } from 'react'

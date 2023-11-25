@@ -1,11 +1,11 @@
-import style from './home.module.css';
+
 import Social from '../../components/Social';
-import { FaGithub , FaYoutube, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaGithub ,  FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
 import { auth, db } from '../../services/firebaseConnection';
 import { signOut } from 'firebase/auth';
-import { Link } from 'react-router-dom';
-import { getDocs, onSnapshot, query, orderBy, where, collection } from 'firebase/firestore';
+
+import {  onSnapshot, query, orderBy, where, collection } from 'firebase/firestore';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import Header from '../../components/Header';

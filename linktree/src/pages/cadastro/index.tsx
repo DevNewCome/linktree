@@ -1,12 +1,9 @@
 import Input from "../../components/input"
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { db, auth } from '../../services/firebaseConnection'
+import { auth } from '../../services/firebaseConnection'
 import { 
     createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
-    signOut,
-    onAuthStateChanged
   } from 'firebase/auth'
 import { useNavigate } from "react-router-dom"
 import { toast } from "react-toastify"
