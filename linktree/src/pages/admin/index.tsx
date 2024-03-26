@@ -61,7 +61,7 @@ export default function Admin(){
     async function handleRegister(e: FormEvent){
         e.preventDefault();
             if(nameInput === '' || urlInput === ''){
-                alert('Preencha todos os campos')
+               toast.warning('Preencha todos os campos')
                     return
             }
            await addDoc(collection(db, 'links'), {
@@ -145,20 +145,27 @@ export default function Admin(){
             )}
                 <button type='submit' className=' bg-blue-600 h-9 rounded-md text-white font-medium gap-4 flex justify-center items-center'>Cadastrar</button>
              </form>
+             {links.length > 0 ? (
+        <>
+            <h2 className='font-bold text-white mb-4 text-2xl'>Links</h2>
+                {links.map((item) => (
+            <article key={item.id}
+                style={{ backgroundColor: item.bg, color: item.color }}
+                className='flex items-center justify-between w-11/12 max-w-xl rounded py-3 px-2 mb-2 select-none'>
+                    <p>{item.name}</p>
+                <div>
+                    <button onClick={() => del(item.id)} className='border bg-neutral-900 border-dashed p-1 rounded'>
+                    <FiTrash size={18} color='fff' />
+                    </button>
+                </div>
+            </article>
+            ))}
+        </>
+        ) : (
+            <h2 className='font-bold text-white mb-4 text-2xl'>Sem links cadastrados</h2>
+        )}
 
-             <h2 className=' font-bold text-white mb-4 text-2xl'>Meus Links</h2>
-             {links.map((item) => (
-                <article key={item.id}
-                style={{backgroundColor: item.bg, color:item.color}}
-                className=' flex items-center justify-between w-11/12 max-w-xl rounded py-3 px-2 mb-2 select-none'>
-                   <p>{item.name}</p>
-                   <div>
-                       <button onClick={() => del(item.id)} className=' border bg-neutral-900 border-dashed p-1 rounded'>
-                           <FiTrash size={18} color='fff'/>
-                       </button>
-                   </div>
-                </article>
-             ))}
+           
         </div>
        
     )

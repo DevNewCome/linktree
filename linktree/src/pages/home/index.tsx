@@ -105,7 +105,7 @@ export default function Home() {
     <div className='flex flex-col w-full py-4 items-center justify-center relative'>
       <Header />
       <h1 className='md:text-4xl text-3xl font-bold text-white mt-20'>Home</h1>
-      <span className='text-gray-50 mb-5 mt-3'>Veja meus links</span>
+      <span className='text-gray-50 text-2xl mb-5 mt-3 '>{links.length === 0 ? 'Sem tarefas cadastradas' : 'Tarefas'}</span>
       <main className='flex flex-col w-11/12 max-w-xl text-center'>
         {links.map((item) => (
           <section

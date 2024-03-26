@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom'
 import Input from '../../components/input'
-import { useState, FormEvent } from 'react'
+import { useState, FormEvent, useRef } from 'react'
 import { auth } from '../../services/firebaseConnection'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { toast } from 'react-toastify'
@@ -14,8 +14,6 @@ export default function Login(){
 
    async function handleSubmit(e: FormEvent){
         e.preventDefault();
-
-           
               if(email === '' || password === ''){
                   toast.warning('Informe usuário e senha')
                     return
@@ -39,10 +37,12 @@ export default function Login(){
              </Link>
              <form onSubmit={handleSubmit} className=' w-full max-w-xl flex flex-col px-3'>
                <Input
+               
                type='email'
                value={email}
                onChange={(e) => setEmail(e.target.value)}
-                placeholder='Digite seu E-mail'
+               placeholder='Digite seu E-mail'
+               autoFocus={true}
                />
                  <Input
                type='password'
