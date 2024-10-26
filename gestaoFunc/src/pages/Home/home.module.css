@@ -1,0 +1,74 @@
+.container{
+    width: 100%;
+}
+
+.cadastroDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 120px);
+    gap: 22px;
+}
+
+.cadastroDiv input, button{
+    width: 100%;
+    max-width: 650px;
+}
+
+.cadastroDiv input{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #e1e0e0;
+}
+
+.cadastroDiv button{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #dde0e0;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.cadastroDiv button:hover{
+    background-color: #d2d2d2;
+}
+
+.cadastroDiv select{
+    width: 650px;
+    padding: 10px;
+    border: 10px;
+    font-weight: bolder;
+    border: 2px solid ;
+    font-size: 20px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+
+.divUsuario{
+    margin: 25px;
+}
+
+.divUsuario button{
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bolder;
+    width: 100px;
+    padding: 8px;
+    background-color: rgb(252, 67, 67);
+    margin-top: 10px;
+}
+
+
+.divUsuario button:hover{
+    background-color: rgba(252, 67, 67, 0.702);
+}

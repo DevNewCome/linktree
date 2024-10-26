@@ -1,0 +1,22 @@
+.container{
+    background-color: rgba(181, 244, 245, 0.821);
+}
+
+.icon{
+    width: 100%;
+    width: 80px;
+    bottom: 20px; /* ajuste conforme necessário */
+    right: 60px; /* ajuste conforme necessário */
+    position: fixed;
+    z-index: 3;
+    background-color: transparent;
+}
+
+.icon img{
+    height: 70px;
+    width: 70px;
+}
+
+.icon img:hover{
+    scale: 1.15;
+}

@@ -1,0 +1,53 @@
+.menu{
+    width: 100%;
+    background-color: #3043B8;
+    height: 100px;
+    opacity: 0.8;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.menuLogoText{
+    display: flex;
+    flex-direction: column;
+}
+
+.menuLogoText>:nth-child(1){
+    color: #0667D2;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.menuLogoText>:nth-child(2){
+    color: #FFF;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.menu nav ul{
+    display: flex;
+    gap: 2.5rem;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.menu nav ul li{
+    list-style: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+.menu nav ul li:hover{
+    color: #0873e6;
+}

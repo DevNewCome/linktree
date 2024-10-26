@@ -1,0 +1,32 @@
+h1{
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.container{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.titulo{
+
+}
+
+.link{
+    text-decoration: none;
+    background-color: #575757;
+    padding: 10px;
+    border-radius: 10px;
+    list-style: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 19px;  
+    transition: all 0.3s;
+}
+
+.link:hover{
+    color: #ccc;
+    transform: scale(1.08);
+    background-color: #30beff;
+}
